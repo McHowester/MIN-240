@@ -1,0 +1,157 @@
+<html>
+<head></head>
+<style>
+    #snowglobe {
+        position: absolute;
+        top: 25vmin;
+        left: 25vmin;
+        width: 70vmin;
+        height: 70vmin;
+        border-radius: 50%;
+        border: 1px solid black;
+        
+    }
+    
+    #base {
+         position: absolute;
+        top: 94%;
+        left: 25%;
+        width: 50%;
+        height: 18%;
+        background-color: black;
+        transform: perspective(50px)
+                    rotateX(10deg)
+    }
+    
+    #spaceship {
+        position: absolute;
+        height: 100vmin;
+        width: 100vmin;
+        transform-origin: bottom center;
+        animation:
+        flyLeft 2s,
+        flyUp 2s 2s,
+        flyRight 2s 4s,
+        flyDown 2s 6s,
+        flyBack 1s 8s;
+    }
+    
+    @keyframes flyLeft {
+        from{transform: translateX(0);}
+        to{transform: translateX(-13vmin);}
+    }
+    
+    @keyframes flyUp {
+        from{transform: translateX(-13vmin);}
+        to{transform: translateY(-22vmin) translateX(-13vmin);}
+    }
+
+    @keyframes flyRight {
+        from{transform: translateY(-22vmin) translateX(-13vmin);}
+        to{transform: translateY(-22vmin) translateX(11vmin);}
+    }
+    
+    @keyframes flyDown {
+        from{transform: translateY(-22vmin) translateX(11vmin);}
+        to{transform: translateY(0vmin) translateX(11vmin);}
+    }
+    
+    @keyframes flyBack {
+        from{transform: translateY(0vmin) translateX(11vmin);}
+        to{transform: translateX(0);}
+    }
+    #body {
+        position: absolute;
+        top: 60%;
+        left: 52.5%;
+        width: 15%;
+        height: 20%;
+        background-color: red;
+        z-index: 1;
+    }
+    
+    #cockpit {
+        position: absolute;
+        top: 68%;
+        left: 56%;
+        width: 8%;
+        height: 8%;
+        border-radius: 50%;
+        background-color: paleturquoise;
+        border: 1px solid black;
+        z-index: 1;
+    }
+    
+    #cockpitshine {
+        position: absolute;
+        top: 72%;
+        left: 61%;
+        width: 2%;
+        height: 2%;
+        border-radius: 50%;
+        background-color: white;
+        z-index: 1;
+    }
+    
+    #rocket1 {
+        position: absolute;
+        top: 56%;
+        left: 50%;
+        width: 3%;
+        height: 25%;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    #rocket2 {
+        position: absolute;
+        top: 56%;
+        left: 67%;
+        width: 3%;
+        height: 25%;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    
+    #wing {
+        position: absolute;
+        top: 62%;
+        left: 47.5%;
+        width: 25%;
+        height: 15%;
+        background-color: darkblue;
+        border: 1px solid black;
+        transform: perspective(50px)
+                    rotateX(10deg);
+        z-index: 0;
+    }
+    
+    #nose {
+        position: absolute;
+        top: 50%;
+        left: 57.5%;
+        width: 5%;
+        height: 10%;
+        background-color: red;
+        z-index: 1;
+    }
+    .accentRocket {
+        background-color: yellow;
+        }
+    </style>
+<body>
+<div id="snowglobe" >
+    <div id="base"></div>
+</div>
+<div id="spaceship" >
+    <div id="body"></div>
+    <div id="cockpit"></div>
+    <div id="cockpitshine"></div>
+    <div id="rocket1" class='accentRocket'></div>
+    <div id="rocket2" class='accentRocket'></div>
+    <div id="wing"></div>
+    <div id="nose"></div>
+    
+</div>
+    </body>
+</html>
