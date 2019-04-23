@@ -8,7 +8,7 @@
     label {padding-right: 5px;}
 </style>
 <script type="text/javascript">
-function validateForm{}
+function validateForm()
     {
         if (document.forms[0].userName.value == "")
             {alert("Name field cannot be empty.");
@@ -18,14 +18,14 @@ function validateForm{}
             {alert("Language field cannot be empty.");
             return false;
             }
-        alert("Name and Language are valid.");
+        alert("Translator Found!!");
         return true;
     }
 </script>
 </head>
 <body>
-<h2>Language Needed Fourm</h2>
-<form method="post" action="https://mchowester.github.io/MIN-240/Button.html" onsubmit="return validateForm( );">
+<h2>Language Needed Form</h2>
+<form method="post" action="" onsubmit="return validateForm( );">
 <div>
     <label for="userName">Name:</label>
     <input type="text" name="userName" id="userName">
@@ -37,6 +37,7 @@ function validateForm{}
 <div>
     <input type="submit" value="Send Information">
 </div>
+    
 </form>
     
 </body>
